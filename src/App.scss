@@ -1,0 +1,67 @@
+:root {
+  --default-font-size: 1.6rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-snap-type: y mandatory;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--default-font-size);
+  scroll-behavior: smooth;
+}
+
+.app {
+  section {
+    height: 100vh;
+    scroll-snap-align: center;
+
+    &:first-child {
+      background-color: orangered;
+    }
+
+    &:nth-child(2) {
+      background-color: greenyellow;
+    }
+
+    &:nth-child(3) {
+      background-color: yellowgreen;
+    }
+
+    &:nth-child(4) {
+      background-color: crimson;
+    }
+
+    &:nth-child(5) {
+      background-color: teal;
+    }
+
+    &:nth-child(6) {
+      background-color: turquoise;
+    }
+
+    &:nth-child(7) {
+      background-color: tomato;
+    }
+
+    &:nth-child(8) {
+      background-color: cadetblue;
+    }
+
+    &:last-child {
+      background-color: darkmagenta;
+    }
+  }
+}
