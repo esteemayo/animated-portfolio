@@ -1,2 +1,31 @@
 .navbar {
+  height: 10rem;
+
+  &__wrapper {
+    max-width: 136.6rem;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &__social {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__link {
+    &--icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      object-fit: cover;
+    }
+  }
 }

@@ -1,2 +1,19 @@
+@use '../../styles/variables' as vars;
+
 .sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: vars.$clr-white;
+  color: vars.$clr-black;
+
+  &__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40rem;
+    background-color: vars.$clr-white;
+  }
 }

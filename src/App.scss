@@ -1,3 +1,5 @@
+@use './styles/variables.scss' as vars;
+
 :root {
   --default-font-size: 1.6rem;
 }
@@ -19,49 +21,28 @@ html {
 }
 
 body {
+  font-family: 'DM Sans', sans-serif;
   font-size: var(--default-font-size);
+  background-color: vars.$clr-primary;
+  color: vars.$clr-default;
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
 .app {
   section {
     height: 100vh;
     scroll-snap-align: center;
-
-    &:first-child {
-      background-color: orangered;
-    }
-
-    &:nth-child(2) {
-      background-color: greenyellow;
-    }
-
-    &:nth-child(3) {
-      background-color: yellowgreen;
-    }
-
-    &:nth-child(4) {
-      background-color: crimson;
-    }
-
-    &:nth-child(5) {
-      background-color: teal;
-    }
-
-    &:nth-child(6) {
-      background-color: turquoise;
-    }
-
-    &:nth-child(7) {
-      background-color: tomato;
-    }
-
-    &:nth-child(8) {
-      background-color: cadetblue;
-    }
-
-    &:last-child {
-      background-color: darkmagenta;
-    }
   }
 }
