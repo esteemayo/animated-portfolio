@@ -12,17 +12,15 @@ const App = () => {
     <div className='app'>
       <section>
         <Navbar />
-      </section>
-      <section>
         <Hero />
       </section>
-      <section>
+      <section id='Services'>
         <Parallax />
       </section>
       <section>
         <Services />
       </section>
-      <section>
+      <section id='Portfolio'>
         <Parallax />
       </section>
       <section>
@@ -34,7 +32,7 @@ const App = () => {
       <section>
         <Portfolio />
       </section>
-      <section>
+      <section id='Contact'>
         <Parallax />
       </section>
       <section>

@@ -1,2 +1,91 @@
+@use '../../styles/variables.scss' as vars;
+
 .hero {
+  height: calc(100vh - 10rem);
+  background-image: linear-gradient(
+    180deg,
+    vars.$clr-primary,
+    vars.$clr-secondary
+  );
+  overflow: hidden;
+  position: relative;
+
+  &__container {
+    width: 136.6rem;
+    height: 100%;
+    margin: auto;
+  }
+
+  &__text {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+
+    &--secondary {
+      text-transform: uppercase;
+      text-rendering: optimizeLegibility;
+      font-size: 3rem;
+      color: rebeccapurple;
+      letter-spacing: 1rem;
+    }
+
+    &--primary {
+      font-size: 8.8rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &--work,
+    &--contact {
+      font-weight: 300;
+      padding: 2rem;
+      background-color: transparent;
+      color: vars.$clr-white;
+      border: 1px solid currentColor;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+
+    &--work {
+      text-transform: initial;
+    }
+
+    &--contact {
+      text-transform: capitalize;
+    }
+  }
+
+  &__scroll {
+    width: 5rem;
+    cursor: pointer;
+  }
+
+  &__slider {
+    position: absolute;
+    font-weight: bold;
+    font-size: 50vh;
+    bottom: -12rem;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    z-index: 10;
+    user-select: none;
+  }
+
+  &__image {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

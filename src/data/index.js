@@ -4,3 +4,11 @@ export const socials = [
   { id: 3, url: '#', imgSrc: '/youtube.png', alt: 'youtube icon' },
   { id: 4, url: '#', imgSrc: '/dribbble.png', alt: 'dribbble icon' },
 ];
+
+export const links = [
+  { id: 1, label: 'Home' },
+  { id: 2, label: 'Services' },
+  { id: 3, label: 'Portfolio' },
+  { id: 4, label: 'Contact' },
+  { id: 5, label: 'About' },
+];

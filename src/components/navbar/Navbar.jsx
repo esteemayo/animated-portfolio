@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
-import { socials } from './../../index';
 import Sidebar from './../sidebar/Sidebar';
+import { socials } from '../../data/index';
 
 import './Navbar.scss';
 
