@@ -1,2 +1,41 @@
 .parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+    text-transform: capitalize;
+    text-rendering: optimizeLegibility;
+    font-size: 10rem;
+  }
+
+  &__mountains,
+  &__planets,
+  &__stars {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: bottom;
+    position: absolute;
+  }
+
+  &__mountains {
+    background-image: url('/mountains.png');
+    z-index: 3;
+  }
+
+  &__planets {
+    background-image: url('/planets.png');
+    z-index: 2;
+  }
+
+  &__stars {
+    background-image: url('/stars.png');
+    z-index: 1;
+  }
 }

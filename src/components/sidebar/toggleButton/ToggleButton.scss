@@ -4,12 +4,14 @@
   left: 2.5rem;
 
   border: none;
+  outline: none;
   width: 5rem;
   height: 5rem;
   background-color: transparent;
   color: inherit;
   border-radius: 100%;
   cursor: pointer;
+  z-index: 1000;
 
   display: flex;
   align-items: center;

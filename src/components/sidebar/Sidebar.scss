@@ -8,13 +8,17 @@
 
   background-color: vars.$clr-white;
   color: vars.$clr-black;
+  position: fixed;
+  z-index: 1000;
 
   &__background {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+
     width: 40rem;
     background-color: vars.$clr-white;
+    z-index: 1000;
   }
 }

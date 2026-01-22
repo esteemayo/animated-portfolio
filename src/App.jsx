@@ -15,27 +15,16 @@ const App = () => {
         <Hero />
       </section>
       <section id='Services'>
-        <Parallax />
+        <Parallax type='services' />
       </section>
       <section>
         <Services />
       </section>
       <section id='Portfolio'>
-        <Parallax />
+        <Parallax type='portfolio' />
       </section>
-      <section>
-        <Portfolio />
-      </section>
-      <section>
-        <Portfolio />
-      </section>
-      <section>
-        <Portfolio />
-      </section>
+      <Portfolio />
       <section id='Contact'>
-        <Parallax />
-      </section>
-      <section>
         <Contact />
       </section>
     </div>
