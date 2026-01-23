@@ -4,6 +4,10 @@
   --default-font-size: 1.6rem;
 }
 
+:focus-within {
+  outline-offset: 3px;
+}
+
 *,
 *::after,
 *::before {

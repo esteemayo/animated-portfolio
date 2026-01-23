@@ -1,0 +1,74 @@
+@use '../../../styles/variables.scss' as vars;
+
+.single {
+  &__container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__wrapper {
+    max-width: 136.6rem;
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  &__image {
+    flex: 1;
+    height: 50%;
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__box {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &--title {
+      text-transform: initial;
+      text-rendering: optimizeLegibility;
+      font-size: 7.2rem;
+    }
+
+    &--desc {
+      font-size: 2rem;
+      color: gray;
+    }
+
+    &--btn {
+      border: none;
+      text-transform: capitalize;
+      width: 20rem;
+      padding: 1rem;
+      background-color: orange;
+      border-radius: 1rem;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.75;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      &:focus-within {
+        outline: 1px solid orange;
+      }
+    }
+  }
+}
