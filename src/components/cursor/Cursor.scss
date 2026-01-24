@@ -1,2 +1,9 @@
+@use '../../styles/variables.scss' as vars;
+
 .cursor {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid vars.$clr-white;
+  border-radius: 100%;
+  position: fixed;
 }

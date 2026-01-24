@@ -1,2 +1,98 @@
+@use '../../styles/variables.scss' as vars;
+
 .contact {
+  width: 136.6rem;
+  height: 100%;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+
+  &__container {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    &--heading {
+      font-size: 10rem;
+      line-height: 8.8rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      text-transform: capitalize;
+      text-rendering: optimizeLegibility;
+    }
+
+    &--value {
+      font-weight: 300;
+    }
+  }
+
+  &__wrapper {
+    flex: 1;
+    position: relative;
+  }
+
+  &__phone-svg {
+    position: absolute;
+    margin: auto;
+    stroke: orange;
+    z-index: -1;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--input,
+    &--textarea {
+      padding: 2rem;
+      background-color: transparent;
+      color: vars.$clr-white;
+      border: 1px solid currentColor;
+      border-radius: 0.5rem;
+
+      &::placeholder {
+        color: vars.$clr-default;
+      }
+
+      &:disabled {
+        opacity: 0.75;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+
+    &--textarea {
+      resize: none;
+    }
+
+    &--btn {
+      border: none;
+      font-weight: 500;
+      padding: 2rem;
+      background-color: orange;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.75;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      &:focus-within {
+        outline: 1px solid orange;
+      }
+    }
+  }
 }

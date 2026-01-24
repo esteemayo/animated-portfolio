@@ -1,15 +1,17 @@
-import Parallax from './components/parallax/Parallax';
-import Hero from './components/hero/Hero';
-import Services from './components/services/Services';
-import Navbar from './components/navbar/Navbar';
-import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
+import Hero from './components/hero/Hero';
+import Parallax from './components/parallax/Parallax';
+import Navbar from './components/navbar/Navbar';
+import Services from './components/services/Services';
+import Cursor from './components/cursor/Cursor';
+import Portfolio from './components/portfolio/Portfolio';
 
 import './App.scss';
 
 const App = () => {
   return (
     <div className='app'>
+      <Cursor />
       <section>
         <Navbar />
         <Hero />
