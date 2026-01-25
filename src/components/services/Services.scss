@@ -1,3 +1,4 @@
+@use '../../styles/responsive.scss' as bp;
 @use '../../styles/variables.scss' as vars;
 
 .services {
@@ -21,6 +22,12 @@
     align-items: center;
     gap: 2rem;
 
+    @include bp.mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
     &--text {
       font-weight: 200;
       font-size: 2rem;
@@ -32,6 +39,10 @@
       width: 50rem;
       border: none;
       border-top: 0.5px solid gray;
+
+      @include bp.mobile {
+        width: 30rem;
+      }
     }
   }
 
@@ -41,6 +52,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include bp.mobile {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -48,16 +63,31 @@
     align-items: center;
     gap: 5rem;
 
+    @include bp.mobile {
+      flex-direction: column;
+      text-align: center;
+      gap: 2rem;
+    }
+
     &--img {
       width: 30rem;
       height: 10rem;
       border-radius: 5rem;
       object-fit: cover;
+
+      @include bp.mobile {
+        width: 20rem;
+        height: 5rem;
+      }
     }
 
     &--heading {
       font-weight: 100;
       font-size: 9.6rem;
+
+      @include bp.mobile {
+        font-size: 3.6rem;
+      }
     }
 
     &--btn {
@@ -69,6 +99,12 @@
       background-color: orange;
       border-radius: 5rem;
       cursor: pointer;
+
+      @include bp.mobile {
+        font-size: 1.6rem;
+        width: 15rem;
+        height: 5rem;
+      }
 
       &:focus-within {
         outline: 2px solid orange;
@@ -90,6 +126,11 @@
     max-width: 136.6rem;
     margin: auto;
     list-style: none;
+
+    @include bp.mobile {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__item {
@@ -105,12 +146,22 @@
     justify-content: space-between;
     gap: 2rem;
 
+    @include bp.mobile {
+      padding: 1rem;
+      border: none;
+      align-items: center;
+    }
+
     &--title {
       text-transform: capitalize;
     }
 
     &--desc {
       font-size: inherit;
+
+      @include bp.mobile {
+        display: none;
+      }
     }
 
     &--btn {
@@ -120,14 +171,23 @@
       border-radius: 2px;
       cursor: pointer;
 
-      &:disabled {
-        opacity: 0.75;
-        pointer-events: none;
-        user-select: none;
+      @include bp.mobile {
+        width: 50%;
+        padding: 0.5rem;
+        background-color: transparent;
+        color: orange;
+        border: 1px solid currentColor;
+        border-radius: 0.5rem;
       }
 
       &:focus-within {
         outline: 2px solid orange;
+      }
+
+      &:disabled {
+        opacity: 0.75;
+        pointer-events: none;
+        user-select: none;
       }
     }
   }

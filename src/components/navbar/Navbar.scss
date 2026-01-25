@@ -1,3 +1,5 @@
+@use '../../styles/responsive.scss' as bp;
+
 .navbar {
   height: 10rem;
 
@@ -9,11 +11,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include bp.mobile {
+      justify-content: flex-end;
+      padding: 2rem;
+    }
   }
 
   &__logo {
     font-weight: bold;
     text-transform: capitalize;
+
+    @include bp.mobile {
+      display: none;
+    }
   }
 
   &__social {

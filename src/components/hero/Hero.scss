@@ -1,3 +1,4 @@
+@use '../../styles/responsive.scss' as bp;
 @use '../../styles/variables.scss' as vars;
 
 .hero {
@@ -27,6 +28,14 @@
     justify-content: center;
     gap: 4rem;
 
+    @include bp.mobile {
+      width: 100%;
+      height: 50%;
+      gap: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+
     &--secondary {
       text-transform: uppercase;
       text-rendering: optimizeLegibility;
@@ -37,6 +46,10 @@
 
     &--primary {
       font-size: 8.8rem;
+
+      @include bp.mobile {
+        font-size: 3.6rem;
+      }
     }
   }
 
@@ -87,5 +100,22 @@
     position: absolute;
     top: 0;
     right: 0;
+
+    @include bp.mobile {
+      width: 100%;
+      height: 50%;
+      top: unset;
+      bottom: 0;
+    }
+
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include bp.mobile {
+        object-fit: contain;
+      }
+    }
   }
 }

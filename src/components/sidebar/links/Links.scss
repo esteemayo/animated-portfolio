@@ -1,3 +1,5 @@
+@use '../../../styles/responsive.scss' as bp;
+
 .links {
   position: absolute;
   width: 100%;
@@ -13,6 +15,10 @@
     &:link,
     &:visited {
       font-size: 4rem;
+
+      @include bp.mobile {
+        font-size: 2rem;
+      }
     }
   }
 }
