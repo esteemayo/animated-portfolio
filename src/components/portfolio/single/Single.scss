@@ -1,3 +1,4 @@
+@use '../../../styles/responsive.scss' as bp;
 @use '../../../styles/variables.scss' as vars;
 
 .single {
@@ -20,16 +21,29 @@
     align-items: center;
     justify-content: center;
     gap: 5rem;
+
+    @include bp.mobile {
+      flex-direction: column;
+    }
   }
 
   &__image {
     flex: 1;
     height: 50%;
 
+    @include bp.mobile {
+      width: 100%;
+      max-height: 30rem;
+    }
+
     &--img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include bp.mobile {
+        object-fit: contain;
+      }
     }
   }
 
@@ -40,15 +54,30 @@
     flex-direction: column;
     gap: 3rem;
 
+    @include bp.mobile {
+      transform: none !important;
+      padding: 1rem;
+      align-items: center;
+      text-align: center;
+    }
+
     &--title {
       text-transform: initial;
       text-rendering: optimizeLegibility;
       font-size: 7.2rem;
+
+      @include bp.mobile {
+        font-size: 3.6rem;
+      }
     }
 
     &--desc {
       font-size: 2rem;
       color: gray;
+
+      @include bp.mobile {
+        font-size: 1.6rem;
+      }
     }
 
     &--btn {

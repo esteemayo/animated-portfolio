@@ -1,0 +1,13 @@
+@use '../../../styles/variables' as vars;
+
+.alert {
+  font-size: 100%;
+
+  &-success {
+    color: vars.$clr-success;
+  }
+
+  &-danger {
+    color: vars.$clr-danger;
+  }
+}

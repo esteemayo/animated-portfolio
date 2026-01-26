@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion, useInView } from 'framer-motion';
 
+import Alert from './alert/Alert';
 import './Contact.scss';
 
 const variants = {
@@ -152,8 +153,21 @@ const Contact = () => {
             Submit
           </button>
 
-          {error && <p>Something went wrong!</p>}
-          {success && <p>Your message has been sent!</p>}
+          {error && (
+            <Alert
+              type='danger'
+              msg='Something went wrong!'
+              hideAlert={() => setError(false)}
+            />
+          )}
+
+          {success && (
+            <Alert
+              type='success'
+              msg='Your message has been sent!'
+              hideAlert={() => setSuccess(false)}
+            />
+          )}
         </motion.form>
       </motion.div>
     </motion.div>
